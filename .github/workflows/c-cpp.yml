@@ -9,8 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: fedora-latest |
-             macOS-latest
+    runs-on: ubuntu-latest
     
 
     steps:

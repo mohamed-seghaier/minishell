@@ -17,15 +17,16 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+
     - name: Build executable
       run: make re
 
-    - name: Generate Linux Executable
-      if: matrix.os == 'ubuntu-latest'
-      run: |
-        make re
+    - name: Upload Executable
+      uses: actions/upload-artifact@v2
+      with:
+        name: mysh  
+        path: ./mysh
 
-    - name: Generate macOS Executable
-      if: matrix.os == 'macos-latest'
-      run: |
-        make re
+
+
+

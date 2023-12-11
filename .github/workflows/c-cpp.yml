@@ -17,22 +17,15 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    # Étape pour la compilation
     - name: Build executable
       run: make re
 
-    # Étape pour générer l'exécutable Linux
     - name: Generate Linux Executable
       if: matrix.os == 'ubuntu-latest'
       run: |
-        # Ajoutez ici les commandes spécifiques pour générer l'exécutable Linux
-        # par exemple : gcc -o mon_programme_linux fichier_source.c
+        make re
 
-    # Étape pour générer l'exécutable macOS
     - name: Generate macOS Executable
       if: matrix.os == 'macos-latest'
       run: |
-        # Ajoutez ici les commandes spécifiques pour générer l'exécutable macOS
-        # par exemple : gcc -o mon_programme_macOS fichier_source.c
-
-    # ... (ajoutez d'autres étapes au besoin)
+        make re

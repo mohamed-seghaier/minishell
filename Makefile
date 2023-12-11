@@ -33,7 +33,7 @@ SRCS	=	./print/flags.c \
 OBJS	= $(SRCS:.c=.o)
 
 CFLAGS = -I ./include/
-CFLAGS += -Wall -Wextra -Werror
+CFLAGS += -Wall -Wextra
 
 all: $(NAME)
 

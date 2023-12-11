@@ -33,11 +33,9 @@ char	*my_strecopy(char *src, char *dest, int base)
 		idx_s += (idx_d == 0 && src[idx_s] == 32 ? 1 : 0);
 		for (; src[idx_s] == 32 && src[idx_s + 1] == 32;)
 			idx_s += 1;
-		if (src[idx_s] != 9 || src[idx_s] != 11) {
 			dest[idx_d] = src[idx_s];
 			idx_s += 1;
 			idx_d += 1;
-		}
 	}
 	dest[idx_d] = 0;
 	return (dest);

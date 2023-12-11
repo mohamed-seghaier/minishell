@@ -46,7 +46,6 @@ void	do_setenv(t_line *shell)
 {
 	t_env	*tmp = shell->env;
 	char	*s1 = my_strcat(shell->cmd[1], "=");
-	int	i = 0;
 	int	j = 0;
 
 	while (tmp != NULL) {
@@ -55,7 +54,6 @@ void	do_setenv(t_line *shell)
 			j = 1;
 		}
 		tmp = tmp->next;
-		i += 1;
 	}
 	if (j == 0)
 		ad_setenv(shell, shell->env, s1);

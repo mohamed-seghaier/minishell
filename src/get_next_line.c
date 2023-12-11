@@ -28,7 +28,7 @@ char	*my_strcat(char *src, char *dest)
 	int	i = my_strlen(src);
 	int	j = my_strlen(dest);
 	int	k = 0;
-	char	*tmp = malloc(sizeof(char) * (i + j));
+	char	*tmp = malloc(sizeof(char) * (i + j) + 1);
 
 	for (i = 0; src[i]; i += 1, k += 1)
 		tmp[k] = src[i];
@@ -39,7 +39,7 @@ char	*my_strcat(char *src, char *dest)
 
 char	*get_next_line(int fd)
 {
-	char	tmp[2];
+	char	tmp[1];
 	char	*dest = "";
 	int	i = 0;
 	int	j = 0;

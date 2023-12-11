@@ -12,7 +12,7 @@ void	my_printf(char *str, ...)
 	int	i = 0;
 	va_list	ap;
 
-	va_start(ap, 0);
+	va_start(ap, str);
 	for (i = 0; str[i];) {
 		if (str[i] == '%' && (checkflag(str[i + 1]) != -1)) {
 			my_ptab(checkflag(str[i + 1]), ap);

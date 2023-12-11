@@ -28,7 +28,7 @@ char	*my_strcat(char *src, char *dest)
 	int	i = my_strlen(src);
 	int	j = my_strlen(dest);
 	int	k = 0;
-	char	*tmp = malloc(sizeof(char) * (i + j) + 1);
+	char	*tmp = malloc(sizeof(char) * (i + j));
 
 	for (i = 0; src[i]; i += 1, k += 1)
 		tmp[k] = src[i];
